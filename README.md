@@ -1,4 +1,4 @@
-# Bot Interaction and Political Compass in Italian Political Tweets regarding Ukrainian War
+## Bot Interaction and Political Compass in Italian Political Tweets regarding Ukrainian War
 
 This is the final project in the Advanced Topics in Computer and Network Security course that we've followed during the first semester of the second year of the Master Degree in Cybersecurity at Università degli Studi di Padova. 
 
