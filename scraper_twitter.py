@@ -20,7 +20,7 @@ auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET_KEY)
 auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
-client = tweepy.Client(bearer_token = TWITTER_BEARER_TOKEN, wait_on_rate_limit=True)
+#client = tweepy.Client(bearer_token = TWITTER_BEARER_TOKEN, wait_on_rate_limit=True)
 
 center_left_wing_pE = ["@Piu_Europa", "@emmabonino", "@bendellavedova", "@riccardomagi", "@marcocappato"]
 center_right_wing_FI = ["@forzaitalia", "@berlusconi", "@Antonio_Tajani", "@BerniniAM", "@gasparripdl"]
@@ -38,7 +38,7 @@ for party in parties:
     full_party = []
     for user in party:
         #tweets = []
-        for response in tweepy.Paginator(client.search_all_tweets, 
+        for response in tweepy.Paginator(api.search_all_tweets, 
                                         
                                         query = f'{user} lang:it',
                                          user_fields = ['username', 'public_metrics', 'description', 'location'],
