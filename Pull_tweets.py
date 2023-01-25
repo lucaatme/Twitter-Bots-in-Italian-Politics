@@ -7,12 +7,12 @@ from datetime import datetime
 from tweepy import Cursor
 import datetime
 
-
+ 
 # Twitter API credentials
-TWITTER_CONSUMER_KEY = "TWITTER_CONSUMER_KEY"
-TWITTER_CONSUMER_SECRET = "TWITTER_CONSUMER_SECRET"
-TWITTER_ACCESS_TOKEN = "TWITTER_ACCESS_TOKEN"
-TWITTER_ACCESS_TOKEN_SECRET = "TWITTER_ACCESS_TOKEN_SECRET"
+TWITTER_CONSUMER_KEY = "api_key"
+TWITTER_CONSUMER_SECRET = "api_secret"
+TWITTER_ACCESS_TOKEN = "access_token"
+TWITTER_ACCESS_TOKEN_SECRET = "access_token_secret"
 # Twitter API setup
 auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
 auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
@@ -26,15 +26,15 @@ ending_datetime = datetime.datetime.strptime(ending_date, "%Y-%m-%d").replace(tz
 # Get tweets from a specific party
 center_left_wing_pE = ["@Piu_Europa", "@emmabonino", "@bendellavedova", "@riccardomagi", "@marcocappato"]#DONE WITH RT
 center_right_wing_FI = ["@forza_italia", "@berlusconi", "@Antonio_Tajani", "@BerniniAM", "@gasparripdl"]#DONE WITH RT
-right_wing_FdI = ["@FratellidItalia", "@GiorgiaMeloni", "@GuidoCrosetto", "@Ignazio_LaRussa", "@FrancescoLollo1"]#DONE NO RT
-right_wing_L = ["@LegaSalvini", "@matteosalvinimi", "@Fontana3Lorenzo", "@borghi_claudio", "@SimoPillon"]
-left_wing_PD = ["@pdnetwork", "@EnricoLetta", "@serracchiani", "@AndreaOrlandosp", "@lauraboldrini"]
-left_wing_SiVe = ["@Si_sinistra", "@NFratoianni", "@AngeloBonelli1", "@aboubakar_soum", "@EleonoraEvi"]
-center_AzIv = ["@Azione_it", "@CarloCalenda", "@matteorenzi", "@MatteoRichetti", "@meb"] 
-center_M5S = ["@Mov5Stelle", "@GiuseppeConteIT", "@Roberto_Fico", "@PaolaTavernaM5S", "@c_appendino"] 
-extremisms = ["@PartitComunista", "@gparagone", "@MarcoRizzoPC", "@DiegoFusaro", "@marioadinolfi"]
+right_wing_FdI = ["@FratellidItalia", "@GiorgiaMeloni", "@GuidoCrosetto", "@Ignazio_LaRussa", "@FrancescoLollo1"]#DONE NO RT, FDI absent
+right_wing_L = ["@LegaSalvini", "@matteosalvinimi", "@Fontana3Lorenzo", "@borghi_claudio", "@SimoPillon"]#DONE NO RT, L e BORGHI CLAUDIO fino a ottobre
+left_wing_PD = ["@pdnetwork", "@EnricoLetta", "@serracchiani", "@AndreaOrlandosp", "@lauraboldrini"]#DONE NO RT, PD fino a novembre
+left_wing_SiVe = ["@Si_sinistra", "@NFratoianni", "@AngeloBonelli1", "@aboubakar_soum", "@EleonoraEvi"]#DONE NO RT, SiVE fino a dicembre e Fratoianni fino a settembre
+center_AzIv = ["@Azione_it", "@CarloCalenda", "@matteorenzi", "@MatteoRichetti", "@meb"] #DONE NO RT, CALENDA fino a Agosto
+center_M5S = ["@Mov5Stelle", "@GiuseppeConteIT", "@Roberto_Fico", "@PaolaTavernaM5S", "@c_appendino"] #DONE WITH RT
+extremisms = ["@PartitComunista", "@gparagone", "@MarcoRizzoPC", "@DiegoFusaro", "@marioadinolfi"] #DONE NO RT, FUSARO fino a ottobre
 
-parties = [center_M5S]
+parties = [extremisms]
 df = pd.DataFrame(columns=['username', 
                            'tweets', 
                            'date',
@@ -79,7 +79,8 @@ for party in parties:
         df = df.drop_duplicates()
         df['date'] = pd.to_datetime(df['date'], utc = True)
         df = df[(df['date'].between(starting_date, ending_date))]
-        print('Success!')
+        print('Success! Now sleeping for 1 minutes')
+        time.sleep(60)
     print('Creating dataset in .csv format')
     df.to_csv(str(parties[0][0]) + '.csv', index=False)
     print("Created dataset " + str(parties[0][0])+".csv")
