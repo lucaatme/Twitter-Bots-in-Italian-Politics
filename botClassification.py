@@ -6,7 +6,7 @@ sns.set_theme(style="white", font_scale=1.0)
 
 
 # read the json file
-with open('botsFdI.json') as f:
+with open('file.json') as f:
     data = json.load(f)
 
 financial_bots = 0
@@ -60,4 +60,4 @@ plt.legend(loc="best", bbox_to_anchor=(1.2, 1), labels=['%s: %1.2f %%' % (
 
 plt.show()
 
-fig.savefig('classifiedBotFdI.png', dpi=300)
+fig.savefig('figure.png', dpi=300)
