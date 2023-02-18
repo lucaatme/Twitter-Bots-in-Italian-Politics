@@ -1,6 +1,6 @@
 ## Bot Interaction and Political Compass in Italian Political Tweets regarding Ukrainian War
 
-This is the final project in the Advanced Topics in Computer and Network Security course that we've followed during the first semester of the second year of the Master Degree in Cybersecurity at Università degli Studi di Padova. 
+This is the final project for the Advanced Topics in Computer and Network Security course that myself and @kdf_7 followed during A.Y. 2022/2023 at the University of Padua<. 
 
 ## Topic and Objectives of the project
 The main topic of the project is Social Networks analysis.
