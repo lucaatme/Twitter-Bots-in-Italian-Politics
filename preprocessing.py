@@ -4,7 +4,7 @@ import botometer
 from config import *
 import json
 
-with open('resultsFdI.json') as f:
+with open('nameFile.json') as f:
     data = json.load(f)
 
 list_authors = []
@@ -31,13 +31,10 @@ bom = botometer.Botometer(wait_on_ratelimit=True,
                           rapidapi_key=rapidapi_key,
                           **twitter_app_auth)
 
-for account in modified_list[400:500]:
+for account in modified_list:
     result = bom.check_account(account)
     list_authors.append(result)
     print("Account: ", account, " checked!")
 
-with open('botometer_results_FdI_4.json', 'w') as f:
+with open('botometerResult.json', 'w') as f:
     json.dump(list_authors, f, indent=4)
-# blt_twitter = botometer.BotometerLite(
-# rapidapi_key=rapidapi_key, **twitter_app_auth)
-#
