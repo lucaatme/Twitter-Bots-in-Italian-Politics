@@ -9,8 +9,6 @@ for party in csv_list:
         your_list = list(reader)
     # iterate for each row and print the content of the field "tweets"
     for row in your_list:
-        # print(row[1])
-        # substitute a string with a space
         row[1] = re.sub(r"https://t\.co/\w+", "", row[1])
     print("Party " + party + " edited")
     # save the new list in a csv file
