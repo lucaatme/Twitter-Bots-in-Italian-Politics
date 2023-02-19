@@ -22,14 +22,15 @@ where:
 In the end, the definitive dataset can be found in the table below.
 | Party / Coalition          | Amount of Tweets |
 |---------------------------|-----------------|
-| +Europa                   | 4383            |
-| Forza Italia              | 4172            |
-| Fratelli d'Italia         | 6610            |
 | Lega                      | 15797           |
-| Partito Democratico       | 4357            |
-| Sinistra Italiana - Verdi | 5003            |
 | Azione - Italia Viva      | 7272            |
+| Fratelli d'Italia         | 6610            |
+| Sinistra Italiana - Verdi | 5003            |
+| +Europa                   | 4383            | 
+| Partito Democratico       | 4357            |
+| Forza Italia              | 4172            |
 | Movimento 5 Stelle        | 3672            |
+|---------------------------|-----------------|
 | **Total**                 | **51266**       |
 
 
