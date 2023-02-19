@@ -30,7 +30,6 @@ In the end, the definitive dataset can be found in the table below.
 | Partito Democratico       | 4357            |
 | Forza Italia              | 4172            |
 | Movimento 5 Stelle        | 3672            |
-|---------------------------|-----------------|
 | **Total**                 | **51266**       |
 
 
