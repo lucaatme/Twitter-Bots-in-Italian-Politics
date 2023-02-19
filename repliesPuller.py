@@ -36,7 +36,7 @@ def connect_to_endpoint(url, params):
     return response.json()
 
 
-query_params = {'query': '(to:LegaSalvini -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
+query_params = {'query': '(to:username -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
                 'max_results': 100, 'start_time': start_time, 'end_time': end_time}
 
 json_response = connect_to_endpoint(search_url, query_params)
@@ -57,7 +57,7 @@ if 'next_token' in json_response['meta']:
     next_token = json_response['meta']['next_token']
 
     # make a subsequent API call with the next token
-    query_params = {'query': '(to:LegaSalvini -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
+    query_params = {'query': '(to:username -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
                     'max_results': 100, 'start_time': start_time, 'end_time': end_time, 'next_token': next_token}
     json_response = connect_to_endpoint(search_url, query_params)
 
@@ -74,7 +74,7 @@ if 'next_token' in json_response['meta']:
 while 'next_token' in json_response['meta']:
     time.sleep(10)
     next_token = json_response['meta']['next_token']
-    query_params = {'query': '(to:LegaSalvini -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
+    query_params = {'query': '(to:username -is:retweet)', 'tweet.fields': 'author_id,created_at,public_metrics',
                     'max_results': 100, 'start_time': start_time, 'end_time': end_time, 'next_token': next_token}
 
     json_response = connect_to_endpoint(search_url, query_params)
