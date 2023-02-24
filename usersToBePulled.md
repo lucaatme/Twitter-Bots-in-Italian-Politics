@@ -1,0 +1,8 @@
+Matteo Salvini [X]
+Emma Bonino [X]
+Carlo Calenda []
+Enrico Letta []
+Giorgia Meloni []
+Silvio Berlusconi [X]
+Nicola Fratoianni []
+Giuseppe Conte [X]
