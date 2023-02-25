@@ -59,7 +59,7 @@ This word cloud refers to the tweets posted during the first month of the war. W
 
 After analyzing the content posted by the chosen set of profiles, we took 3 keywords `russia`, `ucraina` and `armi` and we built a *two-hops graph* to gather the words that appeared in the tweets and that had the highest degree of similarity with them. The results can be seen in the image below.
 
-![Alt text](/Final_Graphs/AzIv/AzIv_final.png)
+![Alt text](/Gephi_Graph_Results/AzIv_final_ArchiGrossi.png)
 
 # Bot Analysis
 We took the usernames of whoever replied under a tweet posted by [Carlo Calenda](https://twitter.com/CarloCalenda) in the last 4 days of propaganda, before the General Elections that took place in September, 2022 and we run [botometer](https://github.com/IUNetSci/botometer-python) on them. The results are the following:
