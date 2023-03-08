@@ -52,7 +52,7 @@ This word cloud refers to the tweets posted during the first month of the war. W
 
 
 ## Trends
-![Alt text](/Trends/Trend_tweets_AzIv.png)
+![Alt text](/Trends/Trends_Tweets/Trend_center_AzIv.png)
 
 
 ## 2-Hops Graphs
