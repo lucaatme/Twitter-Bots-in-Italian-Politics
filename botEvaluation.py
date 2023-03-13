@@ -14,10 +14,10 @@ for i in range(10):
 
 bot_counter = 0
 
-for user in data:
-    if user['raw_scores']['universal']['overall'] >= user['cap']['universal']:
-        bot_counter += 1
-        bots.append(user)
+#for user in data:
+#    if user['raw_scores']['universal']['overall'] >= user['cap']['universal']:
+#        bot_counter += 1
+#        bots.append(user)
 
 # save bots to json file
 with open('botsAzIv.json', 'w') as f:
