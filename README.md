@@ -1,6 +1,6 @@
 # TWIPOL: Twitter Italian Politics
 
-### Natural Language Processing and Bot Detection Analysis on Italian political tweeps during the Russian-Ukrainian conflict.
+### Twitter Bots Influence on the Russo-Ukrainian War During the 2022 Italian General Elections.
 
 
 ## Topics of the project
