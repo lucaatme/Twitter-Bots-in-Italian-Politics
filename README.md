@@ -13,5 +13,11 @@ Politicians frequently use Twitter to communicate during political campaigns, bu
 In this work, we investigate how Italian politics responded to the
 Russo-Ukrainian conflict on Twitter and whether bots manipulated public opinion before the 2022 general election. We first analyze 39,611 tweets of six major political Italian parties to understand how they discussed the war during the period February-December 2022. Then, we focus on the 360,823 comments under the last month's posts before the elections, discovering around 12\% of the commenters are bots. By examining their activities, it becomes clear they both distorted how war topics were treated and influenced real users during the last month before the elections.
 
+## What you find in this repository
+This repository contains the dataset and some of the code used in the paper. In particular, it contains:
+- the [datatset](./dataset) used in the paper;
+- part of the [code](./code) used;
+- the [results](./results) obtained.
+
 ## Full Paper
 The full paper is available [here](https://dinorunner.com/it/).
