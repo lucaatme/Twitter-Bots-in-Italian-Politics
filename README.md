@@ -20,4 +20,4 @@ This repository contains the dataset and some of the code used in the paper. In 
 - the [results](./results) obtained.
 
 ## Full Paper
-The full paper is available [here](https://dinorunner.com/it/).
+The full paper is available [here](https://arxiv.org/abs/2306.07183).
